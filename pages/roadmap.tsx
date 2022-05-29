@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import styles from "../src/styles/home.module.scss";
+import styles from "../src/styles/scss/roadmap.module.scss";
 
 export default function Main() {
   const [category, setCategory] = useState<string[]>([]);
