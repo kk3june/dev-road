@@ -29,13 +29,13 @@ export default function Main() {
           <div className={styles.categoryWrapper}>
             {category.map((el) => (
               <div className={styles.categoryItem} key={el}>
-                <h3 className={styles.categoryHeader}>{el}</h3>
+                <h3 className={styles.categoryHeader}>{el[1]}</h3>
                 <Image
                   className={styles.logos}
                   alt="image"
                   width={70}
                   height={70}
-                  src={`/../public/assets/images/logos/${el}.png`}
+                  src={`/../public/assets/images/logos/${el[0]}.png`}
                 />
               </div>
             ))}
