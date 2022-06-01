@@ -1,7 +1,7 @@
 {
   "data": [
     {
-      "group": "htmlcss",
+      "group": ["htmlcss", "HTML + CSS"],
       "bookList": [
         {
           "id": "1",
@@ -54,7 +54,7 @@
       ]
     },
     {
-      "group": "git",
+      "group": ["git", "Git"],
       "bookList": [
         {
           "id": "1",
@@ -155,7 +155,7 @@
       ]
     },
     {
-      "group": "computerscience",
+      "group": ["computerscience", "Computer Science"],
       "bookList": [
         {
           "id": "1",
@@ -256,7 +256,7 @@
       ]
     },
     {
-      "group": "javascript",
+      "group": ["javascript", "JavaScript"],
       "bookList": [
         {
           "id": "1",
@@ -356,7 +356,7 @@
       ]
     },
     {
-      "group": "typescript",
+      "group": ["typescript", "TypeScript"],
       "bookList": [
         {
           "id": "1",
@@ -409,7 +409,7 @@
       ]
     },
     {
-      "group": "react",
+      "group": ["react", "React"],
       "bookList": [
         {
           "id": "1",
@@ -510,7 +510,7 @@
       ]
     },
     {
-      "group": "cooperation",
+      "group": ["cooperation", "Cooperation"],
       "bookList": [
         {
           "id": "1",
