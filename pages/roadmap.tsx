@@ -1,10 +1,13 @@
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import styles from "../src/styles/scss/roadmap.module.scss";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 export default function Main() {
   const [category, setCategory] = useState<string[]>([]);
   useEffect(() => {
+    AOS.init({ duration: 1000 });
     fetch("/assets/mock/mock.json")
       .then((res) => res.json())
       .then((res) => {
@@ -28,7 +31,7 @@ export default function Main() {
         <div className={styles.section}>
           <div className={styles.categoryWrapper}>
             {category.map((el) => (
-              <div className={styles.categoryItem} key={el}>
+              <div className={styles.categoryItem} data-aos="fade-up" key={el}>
                 <h3 className={styles.categoryHeader}>{el[1]}</h3>
                 <Image
                   className={styles.logos}
