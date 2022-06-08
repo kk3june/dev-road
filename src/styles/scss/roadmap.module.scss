@@ -1,4 +1,4 @@
-@import "./color.module";
+@import './color.module';
 
 .wrapper {
   .roadMap {
@@ -29,6 +29,13 @@
       height: 100vh;
 
       .categoryWrapper {
+        .aTag {
+          position: absolute;
+          z-index: 2;
+          width: 70px;
+          height: 70px;
+          color: $font-color;
+        }
         .categoryItem {
           position: absolute;
           display: flex;
@@ -39,32 +46,34 @@
 
           .categoryHeader {
             font-size: 1.5em;
+            width: 100%;
+            text-align: center;
           }
         }
-        .categoryItem:nth-child(1) {
+        .aTag:nth-child(1) {
           left: 35%;
         }
-        .categoryItem:nth-child(2) {
+        .aTag:nth-child(2) {
           top: 10%;
           left: 63%;
         }
-        .categoryItem:nth-child(3) {
+        .aTag:nth-child(3) {
           top: 23%;
-          left: 28%;
+          left: 30%;
         }
-        .categoryItem:nth-child(4) {
+        .aTag:nth-child(4) {
           top: 35%;
           left: 63%;
         }
-        .categoryItem:nth-child(5) {
+        .aTag:nth-child(5) {
           top: 50%;
           left: 30%;
         }
-        .categoryItem:nth-child(6) {
+        .aTag:nth-child(6) {
           top: 65%;
           left: 63%;
         }
-        .categoryItem:nth-child(7) {
+        .aTag:nth-child(7) {
           top: 75%;
           left: 30%;
         }
