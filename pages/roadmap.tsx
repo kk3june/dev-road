@@ -18,7 +18,6 @@ export default function Main() {
       .then((res) => res.json())
       .then((res) => {
         const dataList = res.data;
-        console.log(dataList);
         const arr = [];
         for (let i = 0; i < dataList.length; i++) {
           arr.push({
