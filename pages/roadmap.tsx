@@ -6,20 +6,30 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 export default function Main() {
-  const [category, setCategory] = useState<string[]>([]);
+  const [category, setCategory] = useState<
+    {
+      category: string;
+      categoryTitle: string;
+    }[]
+  >();
   useEffect(() => {
     AOS.init({ duration: 1000 });
     fetch('/assets/mock/mock.json')
       .then((res) => res.json())
       .then((res) => {
         const dataList = res.data;
+        console.log(dataList);
         const arr = [];
         for (let i = 0; i < dataList.length; i++) {
-          arr.push(dataList[i]['group']);
+          arr.push({
+            category: dataList[i]['category'],
+            categoryTitle: dataList[i]['categoryTitle'],
+          });
         }
         setCategory(arr);
       });
   }, []);
+  console.log(category);
 
   return (
     <div className={styles.wrapper}>
@@ -30,22 +40,28 @@ export default function Main() {
         </div>
         <div className={styles.section}>
           <div className={styles.categoryWrapper}>
-            {category.map((el) => (
-              <Link key={el} href={`/category/${el[0]}`}>
-                <a className={styles.aTag} href={`/category/${el[0]}`}>
-                  <div className={styles.categoryItem} data-aos='fade-up'>
-                    <h3 className={styles.categoryHeader}>{el[1]}</h3>
-                    <Image
-                      className={styles.logos}
-                      alt='image'
-                      width={70}
-                      height={70}
-                      src={`/../public/assets/images/logos/${el[0]}.png`}
-                    />
-                  </div>
-                </a>
-              </Link>
-            ))}
+            {category &&
+              category.map((el) => (
+                <Link key={el['category']} href={`/category/${el['category']}`}>
+                  <a
+                    className={styles.aTag}
+                    href={`/category/${el['category']}`}
+                  >
+                    <div className={styles.categoryItem} data-aos='fade-up'>
+                      <h3 className={styles.categoryHeader}>
+                        {el['categoryTitle']}
+                      </h3>
+                      <Image
+                        className={styles.logos}
+                        alt='image'
+                        width={70}
+                        height={70}
+                        src={`/../public/assets/images/logos/${el['category']}.png`}
+                      />
+                    </div>
+                  </a>
+                </Link>
+              ))}
           </div>
           <div className={styles.lineContainer}>
             <svg
