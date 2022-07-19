@@ -55,7 +55,7 @@ export default function Main() {
                         alt='image'
                         width={70}
                         height={70}
-                        src={`/../public/assets/images/logos/${el['category']}.png`}
+                        src={`/assets/images/logos/${el['category']}.png`}
                       />
                     </div>
                   </a>
