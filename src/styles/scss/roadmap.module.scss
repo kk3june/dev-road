@@ -88,16 +88,18 @@
         text-align: center;
 
         svg {
+          position: relative;
           display: inline-block;
           height: 100vh;
         }
       }
+      h2 {
+        position: absolute;
+        width: 100%;
+        bottom: -30px;
+        text-align: center;
+        font-size: 24px;
+      }
     }
-  }
-  .footer {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    height: 3.5rem;
   }
 }

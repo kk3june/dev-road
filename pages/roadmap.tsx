@@ -75,6 +75,10 @@ export default function Main() {
               />
             </svg>
           </div>
+
+          <h2 data-aos='fade-up'>
+            🚀 뛰어난 프론트엔드 개발자가 되기 위한 준비 완료!!
+          </h2>
         </div>
       </div>
     </div>
