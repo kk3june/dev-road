@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
 import Book from '../../src/components/atoms/book';
-import ContentCenter from '../../src/components/template/ContentCenter';
 
 type CategoryProps = {
   id: number;
@@ -26,12 +25,12 @@ function Category() {
           }
         }
       });
-  }, []);
+  }, [params]);
 
   return (
     <div>
       {group?.map((el) => (
-        <Book key={el.id} data={el} />
+        <Book key={el.id} data={el} category={params} />
       ))}
     </div>
   );
