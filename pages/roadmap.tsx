@@ -5,7 +5,7 @@ import styles from '../src/styles/scss/roadmap.module.scss';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
-export default function Main() {
+export default function Roadmap() {
   const [category, setCategory] = useState<
     {
       category: string;

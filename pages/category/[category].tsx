@@ -1,11 +1,18 @@
 import React, { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
+import Book from '../../src/components/atoms/book';
+
+type CategoryProps = {
+  id: number;
+  bookTitle: string;
+  imgSrc: string;
+};
 
 function Category() {
   const router = useRouter();
   const query = router.query;
   const params = query['category'];
-  const [group, setGroup] = useState<{ id: string; bookTitle: string }[]>();
+  const [group, setGroup] = useState<CategoryProps[]>();
 
   useEffect(() => {
     fetch('/assets/mock/mock.json')
@@ -23,7 +30,7 @@ function Category() {
   return (
     <div>
       {group?.map((el) => (
-        <div key={el.id}>{el.bookTitle}</div>
+        <Book key={el.id} data={el} />
       ))}
     </div>
   );
