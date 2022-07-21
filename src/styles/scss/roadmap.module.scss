@@ -1,6 +1,8 @@
 @import './color.module';
 
 .wrapper {
+  height: 192vh;
+
   .roadMap {
     width: 100%;
     height: 100%;
@@ -26,7 +28,7 @@
     .section {
       position: relative;
       width: 100%;
-      height: 100vh;
+      height: 110vh;
 
       .categoryWrapper {
         .aTag {
@@ -58,23 +60,23 @@
           left: 63%;
         }
         .aTag:nth-child(3) {
-          top: 23%;
+          top: 20%;
           left: 30%;
         }
         .aTag:nth-child(4) {
-          top: 35%;
-          left: 63%;
+          top: 33%;
+          left: 62%;
         }
         .aTag:nth-child(5) {
-          top: 50%;
+          top: 47%;
           left: 30%;
         }
         .aTag:nth-child(6) {
-          top: 65%;
+          top: 58%;
           left: 63%;
         }
         .aTag:nth-child(7) {
-          top: 75%;
+          top: 70%;
           left: 30%;
         }
       }
@@ -93,10 +95,10 @@
           height: 100vh;
         }
       }
-      h2 {
+      .destination {
         position: absolute;
         width: 100%;
-        bottom: -30px;
+        bottom: 40px;
         text-align: center;
         font-size: 24px;
       }
