@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
 import Book from '../../src/components/atoms/book';
+import ContentCenter from '../../src/components/template/ContentCenter';
 
 type CategoryProps = {
   id: number;

@@ -1,0 +1,11 @@
+@import '../../color.module';
+
+.bookshelf {
+  display: inline-block;
+  padding: 20px;
+
+  .bookWrapper {
+    display: flex;
+    flex-direction: column;
+  }
+}
