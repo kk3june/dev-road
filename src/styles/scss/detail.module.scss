@@ -1,0 +1,51 @@
+@import './color.module';
+
+.detailWrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 4.5rem;
+  color: $font-color;
+
+  .contentWrapper {
+    width: 55%;
+    margin-left: 2rem;
+    line-height: 1.5;
+    h1 {
+      font-size: $font-medium;
+    }
+    h2 {
+      font-size: $font-basic;
+    }
+    .spanDiv {
+      padding-bottom: 25px;
+    }
+    p span {
+      font-size: $font-basic;
+      display: block;
+    }
+
+    .links {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+
+      span {
+        margin-right: 1rem;
+      }
+
+      .link {
+        display: inline-block;
+        text-align: center;
+        width: 4rem;
+        margin: 10px;
+        padding: 5px;
+        background-color: $font-color;
+        border-radius: 10px;
+        text-decoration: none;
+        color: $grey;
+      }
+    }
+  }
+}

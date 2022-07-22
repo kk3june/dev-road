@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
+import Image from 'next/image';
+import styles from '../../src/styles/scss/detail.module.scss';
 
 type BookType = {
   id: number;
@@ -12,13 +14,12 @@ type BookType = {
   yes24: string;
   sharing: string;
   img: string;
-  suggestiong: string[];
+  suggestion: string[];
 };
 
 const Detail = () => {
   const router = useRouter();
   const query = router.query;
-  console.log(query);
   const [book, setBook] = useState<BookType>();
 
   useEffect(() => {
@@ -39,10 +40,45 @@ const Detail = () => {
           }
         }
       });
-  }, []);
-  console.log(book?.bookTitle);
+  }, [query]);
 
-  return <div>{book?.bookTitle}</div>;
+  return (
+    <>
+      {book?.img && (
+        <div className={styles.detailWrapper}>
+          <div className={styles.img}>
+            <Image alt='img' src={book.img} width={280} height={380}></Image>
+          </div>
+          <div className={styles.contentWrapper}>
+            <h1>{book.bookTitle}</h1>
+            <h2>{book.bookSubTitle}</h2>
+            <div className={styles.spanDiv}>
+              <span>{book.author}</span> | <span>{book.publisher}</span>
+            </div>
+            <p>
+              <span>책 소개</span>
+              {book.summary}
+            </p>
+
+            <div className={styles.links}>
+              <span>바로 구매하기</span>
+              <a href={book.kyobo} className={styles.link}>
+                교보
+              </a>
+              <a href={book.kyobo} className={styles.link}>
+                yes24
+              </a>
+            </div>
+
+            <p>
+              <span>추천사</span>
+              {book.suggestion}
+            </p>
+          </div>
+        </div>
+      )}
+    </>
+  );
 };
 
 export default Detail;
