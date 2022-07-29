@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 import Image from 'next/image';
 import styles from '../../src/styles/scss/detail.module.scss';
+import { Utterances } from 'utterances-react-component';
 
 type BookType = {
   id: number;
@@ -43,7 +44,7 @@ const Detail = () => {
   }, [query]);
 
   return (
-    <>
+    <div>
       {book?.img && (
         <div className={styles.detailWrapper}>
           <div className={styles.img}>
@@ -77,7 +78,12 @@ const Detail = () => {
           </div>
         </div>
       )}
-    </>
+      <Utterances
+        repo='kk3june/dev-road-utterance'
+        theme='github-dark'
+        issueTerm='pathname'
+      />
+    </div>
   );
 };
 

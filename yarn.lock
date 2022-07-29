@@ -1526,7 +1526,7 @@
   "resolved" "https://registry.npmjs.org/queue-microtask/-/queue-microtask-1.2.3.tgz"
   "version" "1.2.3"
 
-"react-dom@^17.0.2 || ^18.0.0-0", "react-dom@18.1.0":
+"react-dom@^16 || ^17 || ^18", "react-dom@^17.0.2 || ^18.0.0-0", "react-dom@18.1.0":
   "integrity" "sha512-fU1Txz7Budmvamp7bshe4Zi32d0ll7ect+ccxNu9FlObT605GOEB8BfO4tmRJ39R5Zj831VCpvQ05QPBW5yb+w=="
   "resolved" "https://registry.npmjs.org/react-dom/-/react-dom-18.1.0.tgz"
   "version" "18.1.0"
@@ -1539,7 +1539,7 @@
   "resolved" "https://registry.npmjs.org/react-is/-/react-is-16.13.1.tgz"
   "version" "16.13.1"
 
-"react@^17.0.2 || ^18.0.0-0", "react@^18.1.0", "react@>= 16.8.0 || 17.x.x || ^18.0.0-0", "react@18.1.0":
+"react@^16 || ^17 || ^18", "react@^17.0.2 || ^18.0.0-0", "react@^18.1.0", "react@>= 16.8.0 || 17.x.x || ^18.0.0-0", "react@18.1.0":
   "integrity" "sha512-4oL8ivCz5ZEPyclFQXaNksK3adutVS8l2xzZU0cqEFrE9Sb7fC0EFK5uEk74wIreL1DERyjvsU915j1pcT2uEQ=="
   "resolved" "https://registry.npmjs.org/react/-/react-18.1.0.tgz"
   "version" "18.1.0"
@@ -1805,6 +1805,11 @@
   "version" "4.4.1"
   dependencies:
     "punycode" "^2.1.0"
+
+"utterances-react-component@^1.0.0":
+  "integrity" "sha512-ouHYHpFtAzGBTm4imUK23dwbuSg7//XsR+lcZ3F9xFm7kBNb0FsKRHTfC+FKUQCWPdIbbgfFsygYWKsbdq1OVA=="
+  "resolved" "https://registry.npmjs.org/utterances-react-component/-/utterances-react-component-1.0.0.tgz"
+  "version" "1.0.0"
 
 "v8-compile-cache@^2.0.3":
   "integrity" "sha512-l8lCEmLcLYZh4nbunNZvQCJc5pv7+RCwa8q/LdUx8u7lsWvPDKmpodJAJNwkAhJC//dFY48KuIEmjtd4RViDrA=="
